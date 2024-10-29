@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 import { Handle, Position } from '@xyflow/react';
 
-function SliderNode({ value, isConnectable, label }) {
+export default function SliderNode({ value, isConnectable, label }) {
 
   const onChange = useCallback((evt) => {
     console.log(evt.target.value);
@@ -11,14 +11,15 @@ function SliderNode({ value, isConnectable, label }) {
     node: {
       height: '50px',
       border: '1px solid #eee',
-      padding: '5px',
+      padding: '10px',
       borderRadius: '5px',
       background: 'white',
+      width: '150px',
     },
     label: {
-      display: 'block',
+      display: 'flex',
       color: '#777',
-      fontSize: '12px',
+      fontSize: '9px',
     },
   };
 
@@ -31,7 +32,28 @@ function SliderNode({ value, isConnectable, label }) {
       />
       <div style={nodeStyle.node}>
         <label htmlFor="text" style={nodeStyle.label}>Label:</label>
-        <input id="text" name="text" onChange={onChange} className="nodrag" />
+        <div
+          style={{
+            width: '100%',
+            backgroundColor: 'lightgray',
+            borderRadius: '4px',
+          }}
+        >
+          <div
+            id="text"
+            name="text"
+            onChange={onChange}
+            className="nodrag"
+            style={{
+              width: '25%',
+              backgroundColor: 'gray',
+              borderRadius: '4px',
+              height: '30px',
+              marginTop: '5px',
+              marginBottom: '5px',
+            }}
+          />
+        </div>
       </div>
       <Handle
         type="source"
@@ -41,5 +63,3 @@ function SliderNode({ value, isConnectable, label }) {
     </>
   );
 }
-
-export default SliderNode;
