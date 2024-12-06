@@ -11,6 +11,7 @@ import {
   applyNodeChanges,
 } from '@xyflow/react';
 import SliderNode from './SliderNode';
+import { Slider } from '@/components/ui/slider';
 import '@xyflow/react/dist/style.css';
 
 export default function App() {
@@ -81,7 +82,9 @@ export default function App() {
     backgroundColor: '#B8CEFF',
   };
 
-  const nodeTypes = useMemo(() => ({ slider:  SliderNode }), []);
+  // const nodeTypes = useMemo(() => ({ slider:  SliderNode }), []);
+
+  const nodeTypes = useMemo(() => ({ slider:  Slider }), []);
 
   return (
     <div style={{ width: '100vw', height: '100vh' }}>
