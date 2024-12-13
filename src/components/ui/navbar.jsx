@@ -5,9 +5,9 @@ export const NavBar = () => (
         </div>
         <div className="flex-none">
             <ul className="menu menu-horizontal px-1">
-            <li><a>Tech FIP</a></li>
+            <li><a>What is governance?</a></li>
             <li><a>Community</a></li>
-            <li><a>Security</a></li>
+            <li><a>Developers</a></li>
             <li>
                 <details>
                 <summary>More</summary>

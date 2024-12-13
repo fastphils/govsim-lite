@@ -15,6 +15,7 @@ import { Slider } from '@/components/ui/slider';
 import { NavBar } from '@/components/ui/navBar';
 import { VotingBar } from '@/components/ui/votingBar';
 import { GovSimInterface } from '@/components/ui/govSimInterface';
+import { Tab } from '@/components/ui/tab';
 
 import '@xyflow/react/dist/style.css';
 

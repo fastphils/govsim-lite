@@ -5,8 +5,10 @@ export const VotingBar = ({ title, icon: Icon, percentage, onChange, onSelect })
   const noHeight = `${100 - percentage}%`;
   return (
     <div className="flex flex-col items-center mx-4 cursor-pointer" onClick={onSelect}>
-      <Icon className="w-6 h-6 mb-2" />
-      <div className="text-sm font-medium mb-2">{title}</div>
+      <div className="tooltip" data-tip={title}>
+        <Icon className="w-6 h-4 mb-2" />
+      </div>
+      {/* <div className="text-sm font-medium mb-2">{title}</div> */}
       <div className="relative w-16 h-64 border rounded-lg overflow-hidden">
         {/* YES Bar */}
         <div 

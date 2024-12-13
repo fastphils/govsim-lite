@@ -2,6 +2,7 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { VotingBar } from '@/components/ui/votingBar';
 import { useEffect, useState } from 'react';
 import { Code, Users, Database, Coins, Car } from 'lucide-react';
+import { Tab } from '@/components/ui/tab';
 
 
 export const GovSimInterface = () => {
@@ -40,7 +41,12 @@ export const GovSimInterface = () => {
     };
 
     return (
-      <Card className="w-full max-w-4xl py-6 my-4 mx-6">
+      <Card className="w-full max-w-4xl py-0 my-2 mx-6">
+        <CardHeader className="my-2">
+            <div className="flex items-center justify-center p-0">
+                <Tab />
+            </div>
+        </CardHeader>
         <CardContent className="w-my-6">
           <div className="flex justify-center items-end space-x-8">
             <VotingBar
