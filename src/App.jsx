@@ -12,10 +12,10 @@ import {
 } from '@xyflow/react';
 import SliderNode from './SliderNode';
 import { Slider } from '@/components/ui/slider';
-import { NavBar } from '@/components/ui/navBar';
+import { NavBar } from '@/components/ui/navbar';
 import { VotingBar } from '@/components/ui/votingBar';
 import { GovSimInterface } from '@/components/ui/govSimInterface';
-import { Tab } from '@/components/ui/tab';
+
 
 import '@xyflow/react/dist/style.css';
 
