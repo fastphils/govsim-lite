@@ -12,6 +12,9 @@ import {
 } from '@xyflow/react';
 import SliderNode from './SliderNode';
 import { Slider } from '@/components/ui/slider';
+import { VotingBar } from '@/components/ui/votingBar';
+import { GovSimInterface } from '@/components/ui/govSimInterface';
+
 import '@xyflow/react/dist/style.css';
 
 export default function App() {
@@ -56,53 +59,54 @@ export default function App() {
     [setNodes],
   );
 
-  useEffect(() => {
-    setNodes((nds) =>
-      nds.map((node) => {
-        if (node.id === '3') {
-          return {
-            ...node,
-            data: {
-              ...node.data,
-              label: `${Math.round(output)}`,
-            },
-          };
-        }
-        return node;
-      }),
-    );
-  });
+  // useEffect(() => {
+  //   setNodes((nds) =>
+  //     nds.map((node) => {
+  //       if (node.id === '3') {
+  //         return {
+  //           ...node,
+  //           data: {
+  //             ...node.data,
+  //             label: `${Math.round(output)}`,
+  //           },
+  //         };
+  //       }
+  //       return node;
+  //     }),
+  //   );
+  // });
 
-  const onConnect = useCallback(
-    (params) => setEdges((eds) => addEdge(params, eds)),
-    [setEdges],
-  );
+  // const onConnect = useCallback(
+  //   (params) => setEdges((eds) => addEdge(params, eds)),
+  //   [setEdges],
+  // );
 
-  const rfStyle = {
-    backgroundColor: '#B8CEFF',
-  };
+  // const rfStyle = {
+  //   backgroundColor: '#B8CEFF',
+  // };
 
   // const nodeTypes = useMemo(() => ({ slider:  SliderNode }), []);
 
-  const nodeTypes = useMemo(() => ({ slider:  Slider }), []);
+  const nodeTypes = useMemo(() => ({ slider:  VotingBar }), []);
 
   return (
-    <div style={{ width: '100vw', height: '100vh' }}>
-      <ReactFlow
-        nodeTypes={nodeTypes}
-        colorMode="light"
-        nodes={nodes}
-        edges={edges}
-        onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}
-        onConnect={onConnect}
-        fitView
-        style={rfStyle}
-      >
-        {/* <Controls />
-        <MiniMap /> */}
-        <Background variant="dots" gap={12} size={1} />
-      </ReactFlow>
-    </div>
+    // <div style={{ width: '100vw', height: '100vh' }}>
+    //   <ReactFlow
+    //     nodeTypes={nodeTypes}
+    //     colorMode="light"
+    //     nodes={nodes}
+    //     edges={edges}
+    //     onNodesChange={onNodesChange}
+    //     onEdgesChange={onEdgesChange}
+    //     onConnect={onConnect}
+    //     fitView
+    //     style={rfStyle}
+    //   >
+    //     {/* <Controls />
+    //     <MiniMap /> */}
+    //     <Background variant="dots" gap={12} size={1} />
+    //   </ReactFlow>
+    // </div>
+    <GovSimInterface />
   );
 }
