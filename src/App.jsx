@@ -12,6 +12,7 @@ import {
 } from '@xyflow/react';
 import SliderNode from './SliderNode';
 import { Slider } from '@/components/ui/slider';
+import { NavBar } from '@/components/ui/navBar';
 import { VotingBar } from '@/components/ui/votingBar';
 import { GovSimInterface } from '@/components/ui/govSimInterface';
 
@@ -107,6 +108,9 @@ export default function App() {
     //     <Background variant="dots" gap={12} size={1} />
     //   </ReactFlow>
     // </div>
-    <GovSimInterface />
+    <>
+      <NavBar />
+      <GovSimInterface />
+    </>
   );
 }

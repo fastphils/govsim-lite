@@ -1,7 +1,7 @@
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { VotingBar } from '@/components/ui/votingBar';
 import { useEffect, useState } from 'react';
-import { Code, Users, Database, Coins } from 'lucide-react';
+import { Code, Users, Database, Coins, Car } from 'lucide-react';
 
 
 export const GovSimInterface = () => {
@@ -40,28 +40,8 @@ export const GovSimInterface = () => {
     };
 
     return (
-      <Card className="w-full max-w-4xl">
-        <CardHeader>
-          <CardTitle className="flex items-center justify-between">
-            <span>SimGov Voting Interface</span>
-            <div className="text-lg">Average: {average}%</div>
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="mb-8">
-            <div className="flex justify-center space-x-4 mb-4">
-              <button className="px-4 py-2 bg-teal-400 text-white rounded hover:bg-teal-500">
-                Tech FIP
-              </button>
-              <button className="px-4 py-2 bg-teal-400 text-white rounded hover:bg-teal-500">
-                Cryptoeconomic Community
-              </button>
-              <button className="px-4 py-2 bg-teal-400 text-white rounded hover:bg-teal-500">
-                Security
-              </button>
-            </div>
-          </div>
-
+      <Card className="w-full max-w-4xl py-6 my-4 mx-6">
+        <CardContent className="w-my-6">
           <div className="flex justify-center items-end space-x-8">
             <VotingBar
               title="Devs"
@@ -94,13 +74,13 @@ export const GovSimInterface = () => {
           </div>
 
           {selectedBar && (
-            <div className="mt-8 p-4 bg-gray-100 rounded-lg">
-              <h3 className="font-bold mb-2">
+            <div className="w-full mt-8 p-4 bg-slate-100 rounded-lg">
+            <h3 className="font-bold mb-2">
                 {selectedBar.charAt(0).toUpperCase() + selectedBar.slice(1).replace(/([A-Z])/g, ' $1')}
-              </h3>
-              <p className="text-gray-600">
+            </h3>
+            <p className="text-gray-600">
                 {constituencyDescriptions[selectedBar]}
-              </p>
+            </p>
             </div>
           )}
 
